@@ -1,0 +1,275 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - false_greet
+  - help 
+  - thank
+  - give_name:
+      use_entities: true
+  - definition_healthcare:
+      use_entities: true
+  - cherche_hopital
+  - position
+  - info_hopital
+
+
+entities:
+  - title
+  - name
+  - region
+  - latitude
+  - longitude
+  - hopitals
+
+slots:
+
+  title:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: title
+
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+  
+  region:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: region
+
+  latitude:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: latitude
+
+  longitude:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: longitude
+  
+  hopitals:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: hopitals
+
+  langcode:
+    type: categorical
+    values:
+      - ar
+      - fr
+      - en
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: langcode
+  
+  langname:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: langcode 
+
+responses:
+  utter_greet:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "سلام! أنا WellnessAI  ، رفيقك الافتراضي لحياة صحية. ماذا يمكنني أن أفعل لك الآن؟"
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "Salut! Je suis WellnessAI, ton compagnon virtuel pour une vie saine. Que puis-je faire pour toi en ce moment?"
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "Hi! I am WellnessAI, your virtual companion for a healthy life. What can I do for you right now?"
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_cheer_up:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "هنا شيء يفرح لك"
+    image: "https://www.youtube.com/watch?v=tswf_A-jkAM"
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "Voici de quoi vous remonter le moral"
+    image: "https://www.youtube.com/watch?v=tswf_A-jkAM"    
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "Here is something to cheer you up:"
+    image: "https://www.youtube.com/watch?v=tswf_A-jkAM"
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_did_that_help:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "هل ساعدك ذلك؟"
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "Cela vous a-t-il aidé ?"
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "Did that help you?"
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_happy:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "أنا سعيد من أجلك ، ابق هكذا دائمًا"
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "Je suis content pour toi, reste toujours comme ça!"
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "I am happy for you, always stay like this !"
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_goodbye:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "إلى اللقاء ! لا تتردد في العودة إذا احتجت إلى المساعدة لاحقًا. أتمنى لك يوماً عظيماً !"
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "Au revoir ! N'hésitez pas à revenir si vous avez besoin d'aide ultérieurement. Passez une excellente journée !"
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "Bye ! Don't hesitate to come back if you need help later. Have a great day !"
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_thanks:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "على الرحب و السعة ! أنا سعيد لأنني استطعت مساعدتك. إذا كان لديك أي أسئلة أخرى ، فلا تتردد في طرحها."
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "De rien ! Je suis ravi d'avoir pu vous aider. Si vous avez d'autres questions, n'hésitez pas à les poser."
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "It was nothing ! I'm glad I could help you. If you have any other questions, don't hesitate to ask them."
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_help:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "إذا كنت تريد التحدث إلى إنسان ، فأنت بحاجة إلى إرسال بريد إلكتروني من صفحة الاتصال ، وسيقومون بإرسال بريد إلكتروني إليك قريبًا جدًا"
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "si vous voulez parler à un humain, vous devez envoyer un e-mail depuis la page de contact, et il vous répondra très bientôt"
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "if you want to talk to a human, you need to send an email from the contact page, and they will email you back very soon"
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_iamabot:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "أنا WellnessAI ، مساعد افتراضي مخصص لرفاهيتك ، مدعوم من Rasa وطورته Sarra Hmida. أنا هنا لأقدم لك النصائح الشخصية والمعلومات والدعم في سعيك وراء حياة صحية ومتوازنة."
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "Je suis WellnessAI, un assistant virtuel dédié à votre bien-être, alimenté par Rasa et développé par Sarra Hmida. Je suis là pour vous fournir des conseils, des informations et un soutien personnalisés dans votre quête d'une vie saine et équilibrée."
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "I am WellnessAI, a virtual assistant dedicated to your well-being, powered by Rasa and developed by Sarra Hmida. I'm here to provide you with personalized advice, information and support in your quest for a healthy and balanced life."
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet"
+
+  utter_cherche_hopital:
+  - condition:
+    - type: slot
+      name: langcode
+      value: ar
+    text: "بالطبع ، يمكنني مساعدتك في ذلك. هل يمكنك أن تعطيني موقعك الحالي أو منطقتك؟"
+  - condition:
+    - type: slot
+      name: langcode
+      value: fr
+    text: "Bien sûr, je peux vous aider avec ça. Pouvez-vous me donner votre position actuelle ou votre région?"
+  - condition:
+    - type: slot
+      name: langcode
+      value: en
+    text: "Of course, I can help you with that. Can you give me your current location or region?"
+  - text: "Désolé, je ne comprends pas votre langue. Pouvez-vous parler arabe, français ou anglais s'il vous plaît ? Ou vérifiez votre connexion Internet "
+
+actions:
+- action_def_health
+- action_detect_language
+- action_give_name
+- action_false_greet
+- action_get_hospital
+- action_get_info_hospital
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
