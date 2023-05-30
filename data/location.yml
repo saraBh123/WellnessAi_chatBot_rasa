@@ -1,0 +1,484 @@
+version: "3.1"
+
+nlu:
+
+- intent: cherche_hopital
+  examples: |
+    - I'm looking for a hospital near here.
+    - Where can I find a hospital in this region?
+    - I'm looking for a hospital nearby.
+    - Can you recommend a trusted hospital?
+    - Do you know a good hospital in this city?
+    - I want to find a hospital that offers specialized care.
+    - I'm looking for a hospital with an emergency department.
+    - Is there a hospital nearby?
+    - I am looking for a hospital that treats specific diseases.
+    - Do you know where I can find a hospital?
+    - I am looking for a hospital renowned for its medical expertise.
+    - Can you tell me where the nearest hospital is?
+    - I want to find a hospital.
+    - Can you recommend a hospital with qualified specialists?
+    - I'm looking for a hospital.
+    - Is there a hospital nearby?
+    - I need a nearby hospital
+    - Je cherche un hôpital près d'ici.
+    - Où puis-je trouver un hôpital dans cette région ?
+    - Je suis à la recherche d'un hôpital dans les environs.
+    - Pouvez-vous me recommander un hôpital de confiance ?
+    - Est-ce que vous connaissez un bon hôpital dans cette ville ?
+    - Je souhaite trouver un hôpital qui offre des soins spécialisés.
+    - Je suis à la recherche d'un hôpital avec un service d'urgence.
+    - Est-ce qu'il y a un hôpital à proximité ?
+    - Je cherche un hôpital qui traite les maladies spécifiques.
+    - Savez-vous où je peux trouver un hôpital ?
+    - Je suis à la recherche d'un hôpital renommé pour son expertise médicale.
+    - Pouvez-vous me dire où se trouve l'hôpital le plus proche ?
+    - Je souhaite trouver un hôpital.
+    - Est-ce que vous pouvez me recommander un hôpital avec des spécialistes qualifiés ?
+    - Je cherche un hôpital.
+    - Y a-t-il un hôpital à proximité ?
+    - je besoin d'un hôpital à proximité
+    - أبحث عن مستشفى بالقرب من هنا.
+    - أين يمكنني أن أجد مستشفى في هذه المنطقة؟
+    - أبحث عن مستشفى قريب.
+    - هل يمكنك أن تنصحني بمستشفى موثوق به؟
+    - هل تعرف مشفى جيد في هذه المدينة؟
+    - أريد أن أجد مستشفى يقدم رعاية متخصصة.
+    - أبحث عن مستشفى به قسم طوارئ.
+    - هل يوجد مستشفى قريب؟
+    - أبحث عن مستشفى يعالج أمراضًا معينة.
+    - هل تعرف أين يمكنني أن أجد مستشفى؟
+    - أبحث عن مستشفى مشهور بخبرته الطبية.
+    - هل يمكن أن تخبرني أين أقرب مستشفى؟
+    - اريد ان اجد مستشفى.
+    - هل يمكنك أن تنصحني بمستشفى به أخصائيين مؤهلين؟
+    - أبحث عن مستشفى.
+    - هل يوجد مستشفى قريب؟
+    - أنا بحاجة إلى مستشفى قريب
+
+- intent: position
+  examples: |
+    - I am in [Tunis](region)
+    - now I have a latitude [36.123685](latitude) and longitude [10.23648](longitude)
+    - latitude [36.123685](latitude), longitude [10.23648](longitude)
+    - my region is [Nabeul](region)
+    - now I'm in [Ariana](region)
+    - the latitude and longitude are [36.123685](latitude) and [10.23648](longitude)
+    - I am currently in [Kef](region).
+    - I am in the region of [Tunis](region).
+    - Currently, I live in [Sousse](region).
+    - I am located in [Béja](region) at the moment.
+    - I am physically present in [Mahdia](region).
+    - At the moment, I am in [Nabeul](region).
+    - My current location is in [Jendouba](region).
+    - I live in the region of [Nabeul](region).
+    - I am located in [Sidi Bouzid](region).
+    - Currently, I am in [Sfax](region), in Tunisia.
+    - I am physically present in [Monastir](region).
+    - I live in [Kébili](region).
+    - My current location is in the city of [Kasserine](region).
+    - I am currently in [Bizerte](region), the capital of Tunisia.
+    - I am in the region of [Ben Arous](region).
+    - My current location is at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - I am at the geographic coordinates latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - Currently, my location is at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - I am at the geographical position latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - My latitude is [36.123685](latitude) and my longitude is [10.23648](longitude).
+    - I am located at GPS coordinates latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - Currently, I am at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - My geographic position is at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - I am at a latitude of [36.123685](latitude) and a longitude of [10.23648](longitude).
+    - Currently I am at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - My current location is at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - I am geographically positioned at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - At GPS coordinates, I am located at latitude [36.123685](latitude) and longitude [10.23648](longitude).
+    - My latitude is [36.123685](latitude) and my longitude is [10.23648](longitude).
+    - Je suis à [Tunis](region)
+    - maintenant j'ai a latitude [36.123685](latitude) et longitude [10.23648](longitude)
+    - latitude [36.123685](latitude), longitude [10.23648](longitude)
+    - ma region est [Nabeul](region)
+    - maintenant, je suis à [Ariana](region)
+    - la latitude et longitude sont [36.123685](latitude) et [10.23648](longitude)
+    - Je me trouve actuellement à [Kef](region).
+    - Je suis dans la région de [Tunis](region).
+    - Actuellement, je réside à [Sousse](region).
+    - Je me localise à [Béja](region) en ce moment.
+    - Je suis physiquement présent à [Mahdia](region).
+    - En ce moment, je me trouve à [Nabeul](region).
+    - Ma localisation actuelle est à [Jendouba](region).
+    - Je réside dans la région de [Nabeul](region).
+    - Je suis situé à [Sidi Bouzid](region).
+    - Actuellement, je suis à [Sfax](region), en Tunisie.
+    - Je suis présent physiquement à [Monastir](region).
+    - Je me situe à [Kébili](region).
+    - Ma position actuelle est dans la ville de [Kasserine](region).
+    - Je suis actuellement à [Bizerte](region), la capitale de la Tunisie.
+    - Je me trouve dans la région de [Ben Arous](region).
+    - Ma position actuelle est à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Je me trouve à la coordonnée géographique latitude [36.123685](latitude) et longitude [10.23648](longitude).
+    - Actuellement, ma localisation est à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Je suis à la position géographique latitude [36.123685](latitude) et longitude [10.23648](longitude).
+    - Ma latitude est [36.123685](latitude) et ma longitude est [10.23648](longitude).
+    - Je me situe aux coordonnées GPS latitude [36.123685](latitude) et longitude [10.23648](longitude).
+    - Actuellement, je me trouve à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Ma position géographique est à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Je me trouve à une latitude de [36.123685](latitude) et à une longitude de [10.23648](longitude).
+    - Actuellement, je suis à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Ma localisation actuelle se situe à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Je suis géographiquement positionné à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Aux coordonnées GPS, je suis situé à la latitude [36.123685](latitude) et à la longitude [10.23648](longitude).
+    - Ma latitude est [36.123685](latitude) et ma longitude est [10.23648](longitude).
+    - أنا في [تونس] (region)
+    - لدي الآن خط عرض [36.123685] (latitude) وخط طول [10.23648] (longitude)
+    - خط العرض [36.123685] (latitude) ، خط الطول [10.23648] (longitude)
+    - منطقتي [نابل] (region)
+    - الآن أنا في [أريانة] (region)
+    - خطوط الطول والعرض هي [36.123685] (latitude) و [10.23648] (longitude)
+    - أنا حاليا في [الكاف] (region).
+    - أنا في منطقة [تونس] (region).
+    - أعيش حاليا في (region) [سوسة].
+    - أنا موجود في [باجة] (region) في الوقت الحالي.
+    - أنا موجود جسديًا في [المهدية] (region).
+    - في الوقت الحالي أنا في [نابل] (region).
+    - موقعي الحالي في [جندوبة] (region).
+    - أعيش في منطقة [نابل] (region).
+    - أنا أعيش في [سيدي ​​بوزيد] (region).
+    - حاليا أنا في [صفاقس] (region) في تونس.
+    - أنا موجود فعليًا في [المنستير] (region).
+    - أعيش في [قبلي] (region).
+    - موقعي الحالي في مدينة [القصرين] (region).
+    - أنا حاليا في [بنزرت] (region) عاصمة تونس.
+    - أنا في منطقة [بن عروس] (region).
+    - موقعي الحالي عند خط العرض [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - أنا عند خط عرض الإحداثيات الجغرافية [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - حاليًا ، موقعي على خط العرض [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - أنا على خط عرض للموقع الجغرافي [36.123685] (latitude) وخط طول [10.23648] (longitude).
+    - خط العرض الخاص بي هو [36.123685] (latitude) وخط الطول الخاص بي هو [10.23648] (longitude).
+    - أنا موجود عند إحداثيات GPS [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - حاليًا ، أنا على خط عرض [36.123685] (latitude) وخط طول [10.23648] (longitude).
+    - موقعي الجغرافي عند خط العرض [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - أنا على خط عرض [36.123685] (latitude) وخط طول [10.23648] (longitude).
+    - أنا حاليًا عند خط عرض [36.123685] (latitude) وخط طول [10.23648] (longitude).
+    - موقعي الحالي عند خط العرض [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - أنا موجود جغرافيًا عند خط العرض [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - عند إحداثيات GPS ، أنا موجود على خط العرض [36.123685] (latitude) وخط الطول [10.23648] (longitude).
+    - خط العرض الخاص بي هو [36.123685] (latitude) وخط الطول الخاص بي هو [10.23648] (longitude).
+
+- intent: info_hopital
+  examples: |
+    - Can you give me information about the [Zaghouan Regional Hospital](hospitals)
+    - Could you provide me with details of the [Aziza Othmana Hospital](hospitals)
+    - I would like specific information about [Clinique Taoufik](hospitals). Can you help me ?
+    - I would like to know more about [Amal Center](hospitals). Could you provide me with detailed information?
+    - I would like general information about [Clinique Pasteur de Tunis](hospitals). Can you help me ?
+    - Can you provide me with information about [Newborn Clinic](hospitals)?
+    - Can you provide me with information on [Zaghouan Regional Hospital](hospitals)?
+    - I would like to know more about the [Zaghouan Regional Hospital](hospitals). Could you give me details?
+    - Can you give me detailed information about the [Zaghouan Regional Hospital](hospitals)?
+    - I am looking for information on the [Zaghouan Regional Hospital](hospitals). Can you help me ?
+    - Can you give me details such as services offered, address and contact numbers of the [Zaghouan Regional Hospital](hospitals)?
+    - I would like specific information about the [Zaghouan Regional Hospital](hospitals).
+    - I would like to know more about the [Zaghouan Regional Hospital](hospitals).
+    - I am interested in the [Zaghouan Regional Hospital](hospitals).
+    - Can you tell me about the [Zaghouan Regional Hospital](hospitals)?
+    - Pouvez-vous me donner des informations sur le [Hôpital régional de Zaghouan](hopitals)
+    - Pourriez-vous me fournir des détails sur le [Hôpital Aziza Othmana](hopitals)
+    - J'aimerais obtenir des informations spécifiques concernant [Clinique Taoufik](hopitals). Pouvez-vous m'aider ?
+    - J'aimerais en savoir plus sur [Centre amal](hopitals). Pourriez-vous me fournir des informations détaillées ?
+    - Je souhaite obtenir des informations générales sur [Clinique Pasteur de Tunis](hopitals). Pouvez-vous m'aider ?
+    - Pouvez-vous me fournir des informations sur [Clinique Du Nouveau-Né](hopitals) ?
+    - Pouvez-vous me fournir des informations sur [Hôpital régional de Zaghouan](hopitals) ?
+    - J'aimerais en savoir plus sur l'[Hôpital régional de Zaghouan](hopitals). Pourriez-vous me donner des détails ?
+    - Est-ce que vous pouvez me donner des informations détaillées sur l'[Hôpital régional de Zaghouan](hopitals) ?
+    - Je suis à la recherche de renseignements sur l'[Hôpital régional de Zaghouan](hopitals). Pouvez-vous m'aider ?
+    - Pouvez-vous me donner des détails tels que les services offerts, l'adresse et les numéros de contact de l'[Hôpital régional de Zaghouan](hopitals) ?
+    - Je souhaite obtenir des informations spécifiques sur l'[Hôpital régional de Zaghouan](hopitals).
+    - J'aimerais en savoir plus sur l'[Hôpital régional de Zaghouan](hopitals).
+    - Je suis intéressé par l'[Hôpital régional de Zaghouan](hopitals).
+    - Pouvez-vous me renseigner sur  l'[Hôpital régional de Zaghouan](hopitals)?
+    - هل يمكن أن تعطيني معلومات عن [مستشفى زغوان الإقليمي] (hopitals)؟
+    - هل يمكن أن تزودني بتفاصيل عن [مستشفى عزيزة العثمانية] (hopitals)؟
+    - أود الحصول على معلومات محددة عن [عيادة توفيق] (hopitals). أيمكنك أن تعينني ؟
+    - أرغب في معرفة المزيد عن [مركز أمل] (hopitals). هل يمكن أن تزودني بمعلومات مفصلة؟
+    - أود الحصول على معلومات عامة حول [Clinique Pasteur de Tunis] (hopitals). أيمكنك أن تعينني ؟
+    - هل يمكنكم تزويدي بمعلومات عن [عيادة حديثي الولادة] (hopitals)؟
+    - هل يمكن أن تزودوني بمعلومات عن [مستشفى زغوان الإقليمي] (hopitals)؟
+    - أود أن أعرف المزيد عن [مستشفى زغوان الإقليمي] (hopitals). هل يمكن أن تعطيني التفاصيل؟
+    - هل يمكن أن تعطيني معلومات مفصلة عن [مستشفى زغوان الإقليمي] (hopitals)؟
+    - أبحث عن معلومات عن [مستشفى زغوان الإقليمي] (hopitals). أيمكنك أن تعينني ؟
+    - هل يمكنكم إعطائي تفاصيل مثل الخدمات المقدمة والعنوان وأرقام الاتصال الخاصة بـ [مستشفى زغوان الإقليمي] (hopitals)؟
+    - أود الحصول على معلومات محددة عن [مستشفى زغوان الإقليمي] (hopitals).
+    - أود أن أعرف المزيد عن [مستشفى زغوان الإقليمي] (hopitals).
+    - أنا مهتم بـ [مستشفى زغوان الإقليمي] (hopitals).
+    - هل يمكن أن تخبرني عن [مستشفى زغوان الإقليمي] (hopitals)؟
+
+- lookup: region
+  examples: | 
+    - Ariana
+    - Béja
+    - Ben Arous
+    - Bizerte
+    - Gabès
+    - Gafsa
+    - Jendouba
+    - Kairouan
+    - Kasserine
+    - Kébili
+    - Kef
+    - Mahdia
+    - Manouba
+    - Médenine
+    - Monastir
+    - Nabeul
+    - Sfax
+    - Sidi Bouzid
+    - Siliana
+    - Sousse
+    - Tataouine
+    - Tozeur
+    - Tunis
+    - Zaghouan 
+    - أريانا
+    - باجة
+    - بن عروس
+    - بنزرت
+    - قابس
+    -قفصة
+    - جندوبة
+    - القيروان
+    - القصرين
+    - قبلي
+    -الكاف
+    - المهدية
+    - منوبة
+    - مدنين
+    - المنستير
+    -نابل
+    - صفاقس
+    - سيدي بوزيد
+    - سليانة
+    - سوسة
+    - تطاوين
+    -توزر
+    - تونس
+    - زغوان
+
+
+- lookup: hopitals
+  examples: | 
+    - Hôpital régional de Zaghouan
+    - Hôpital régional de Zaghouan
+    - مستشفى زغوان الإقليمي
+    - Centre amal
+    - Centre amal
+    - مركز أمل
+    - مصحة زغوان
+    - Clinique de Zaghouan
+    - مصحة زغوان
+    - Cabinet Dr Fedia Jardak Neurologue
+    - Cabinet Dr Fedia Jardak Neurologue
+    - مجلس الوزراء الدكتورة فيديا جارداك أخصائية أمراض الأعصاب
+    - Centre hospitalier international Carthagène
+    - Centre hospitalier international Carthagène
+    - مركز مستشفى قرطاجنة الدولي
+    - Clinique Jasmin
+    - Clinique Jasmin
+    - عيادة الياسمين
+    - Clinique Taoufik
+    - Clinique Taoufik
+    - عيادة توفيق
+    - Centre de maternité et de néonatologie
+    - Centre de maternité et de néonatologie
+    - مركز الأمومة وحديثي الولادة
+    - hopital regional zaghouan
+    - hopital regional de zaghouan
+    - هوبتال زغوان الإقليمية
+    - Clinique Taoufik
+    - Clinique Taoufik
+    - عيادة توفيق
+    - Centre hospitalier international Carthagène
+    - Centre hospitalier international Carthagène
+    - مركز مستشفى قرطاجنة الدولي
+    - Centre de maternité et de néonatologie
+    - Centre de maternité et de néonatologie
+    - مركز الأمومة وحديثي الولادة
+    - Clinique Pasteur de Tunis
+    - Clinique Pasteur de Tunis
+    - عيادة تونس باستور
+    - Clinique du lac
+    - Clinique du lac
+    - عيادة البحيرة
+    - Clinique du lac
+    - Clinique du lac
+    - عيادة البحيرة
+    - Clinique Taoufik
+    - Clinique Taoufik
+    - عيادة توفيق
+    - عيادة توفيق كمون
+    - Clinique Tawfiq Kamoon
+    - عيادة توفيق كمون
+    - Hopital de l'espoir
+    - Hopital de l'espoir
+    - مستشفى الامل
+    - Hôpital La Rabta
+    - Hôpital La Rabta
+    - مستشفى الربطة
+    - clinique Montplaisir
+    - clinique Montplaisir
+    - عيادة مونبليزير
+    - Hôpital Charles Nicolle
+    - Hôpital Charles Nicolle
+    - مستشفى تشارلز نيكول
+    - Clinique ophtamlogique
+    - Clinique ophtamlogique
+    - عيادة العيون
+    - La Clinique Méditerranéenne
+    - La Clinique Méditerranéenne
+    - عيادة البحر المتوسط
+    - Clinique Pédiatrique De Tunis
+    - Clinique Pédiatrique De Tunis
+    - عيادة طب الأطفال بتونس
+    - Urgences clinique de l'Espoir
+    - Urgences clinique de l'Espoir
+    - عيادة الأمل للطوارئ
+    - Clinique Du Nouveau-Né
+    - Clinique Du Nouveau-Né
+    - عيادة حديثي الولادة
+    - Clinique Jasmin
+    - Clinique Jasmin
+    - عيادة الياسمين
+    - الشفاء الطبي
+    - guérison médicale
+    - الشفاء الطبي
+    - Hopital Hay El khadhra
+    - Hôpital Hay El Khadhra
+    - Hopital Hay El khadhra
+    - Centre Médical Pasteur
+    - Centre Médical Pasteur
+    - مركز باستير الطبي
+    - مصحة ابن زهر Clinique Ibn Zohr
+    - Clinique Ibn Zohr
+    - مصحة ابن زهر Clinique Ibn Zohr
+    - Hôpital Mahmoud El Matri
+    - Hôpital Mahmoud El Matri
+    - مستشفى محمود المطري
+    - Clinique Saint Augustin - Chirurgie esthétique Tunisie
+    - Clinique Saint Augustin - Chirurgie esthétique Tunisie
+    - Clinique Saint Augustin - الجراحة التجميلية تونس
+    - Clinique Espoir Tunisie
+    - Clinique Espoir Tunisie
+    - عيادة الأمل التونسية
+    - Averroès Centre de Réhabilitation Comportementale
+    - Averroès Centre de Réhabilitation Comportementale
+    - مركز إعادة التأهيل السلوكي Averroès
+    - مصحة النصر
+    - Clinique de la victoire
+    - مصحة النصر
+    - La Nouvelle Clinique Le Secours
+    - La Nouvelle Clinique Le Secours
+    - عيادة لو سيكور الجديدة
+    - Clinique ophtalmologue
+    - Clinique ophtalmologue
+    - عيادة طب وجراحة العيون
+    - Hôpital Aziza Othmana
+    - Hôpital Aziza Othmana
+    - مستشفى عزيزة عثمان
+    - Clinique le Secours
+    - Clinique le Secours
+    - عيادة الانقاذ
+    - Clinique Cardiologique Lac 1 - مصحة البحيرة للقلب
+    - Clinique Cardiologique Lac 1 - Al Buhaira Cardiac Sanatorium
+    - Clinique Cardiologique Lac 1 - مصحة البحيرة للقلب
+    - Clinique Avicenne
+    - Clinique Avicenne
+    - عيادة ابن سينا
+    - Clinique La Liberté
+    - Clinique La Liberté
+    - عيادة ليبرتي
+    - Polyclinique Les Berges du Lac
+    - Polyclinique Les Berges du Lac
+    - مستوصف Les Berges du Lac
+    - polyclinique les jasmins
+    - polyclinique les jasmins
+    - مستوصف الياسمين
+    - Amen Coeur
+    - Amen Coeur
+    - امين القلب
+    - Clinique Avicenne
+    - Clinique Avicenne
+    - عيادة ابن سينا
+    - Clinique de l'espoir international
+    - Clinique de l'espoir international
+    - عيادة الأمل الدولية
+    - Clinique saint augustin
+    - Clinique saint augustin
+    - عيادة القديس أوغسطين
+    - CENTRE L'ESPOIR MEDICAL
+    - CENTRE L'ESPOIR MEDICAL
+    - مركز الأمل الطبي
+    - Clinique Hannibal
+    - Clinique Hannibal
+    - عيادة حنبعل
+    - Clinique Ophtalmologique De Tunis
+    - Clinique Ophtalmologique De Tunis
+    - عيادة العيون بتونس
+    - Centre d'exploration respiratoire
+    - Centre d'exploration respiratoire
+    - مركز استكشاف الجهاز التنفسي
+    - Polyclinique Internationale Les Narcisses
+    - Polyclinique Internationale Les Narcisses
+    - مستوصف النرجس الدولي
+    - Institut Salah Azaïz
+    - Institut Salah Azaïz
+    - معهد صلاح عزيز
+    - Clinique Elamel Menzeh9
+    - Clinique Elamel Menzeh9
+    - عيادة الاميل المنزه 9
+    - Les Cliniques El Manar
+    - Les Cliniques El Manar
+    - عيادات المنار
+    - Clinique Alyssa مصحة عليسة
+    - Clinique Alyssa
+    - Clinique Alyssa مصحة عليسة
+    - Medico International Services
+    - Services médicaux internationaux
+    - ميديكو انترناشيونال سيرفيسز
+    - Clinique Ennasr
+    - Clinique Ennasr
+    - عيادة النصر
+    - Clinique Ophtalmologique du Lac de Tunis
+    - Clinique Ophtalmologique du Lac de Tunis
+    - عيادة بحيرة تونس للعيون
+    - Saint Augustin Medical Center
+    - Centre Médical Saint Augustin
+    - مركز القديس أوغسطين الطبي
+    - Clinique El Amen
+    - Clinique El Amen
+    - عيادة الامين
+    - Centre de santé de base Ras Ettabia
+    - Centre de santé de base Ras Ettabia
+    - مركز رأس التابية الصحي الأساسي
+    - Clinique Générale et Cardiovasculaire de Tunis
+    - Clinique Générale et Cardiovasculaire de Tunis
+    - عيادة القلب والأوعية الدموية العامة بتونس
+    - مصحة تانيت
+    - Sanatorium de Tanit
+    - مصحة تانيت
+    - Clinique Internationale d'Ophtalmologie
+    - Clinique Internationale d'Ophtalmologie
+    - عيادة طب وجراحة العيون الدولية
+    - علاج طبيعي هدى
+    - Huda Physiothérapie
+    - علاج طبيعي هدى
+    - clinique amilcar
+    - clinique amilcar
+    - عيادة أميلكار
+    - Orthodontist
+    - Orthodontiste
+    - أخصائي تقويم الأسنان
+    - Institut National de Neurologie Mongi-Ben Hamida
+    - Institut National de Neurologie Mongi-Ben Hamida
+    - معهد منجي بن حميدة الوطني لطب الأعصاب
+    - Hôpital Abderrahmen Mami de Pneumo-Phtisiologie
+    - Hôpital Abderrahmen Mami de Pneumo-Phtisiologie
+    - مستشفى عبد الرحمن مامي للجهاز التنفسي

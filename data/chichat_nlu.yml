@@ -1,0 +1,458 @@
+version: "3.1"
+
+nlu:
+
+- intent: false_greet
+  examples: |
+    - goodmorning
+    - goodevening
+    - alo
+    - ahla
+    - cc 
+    - slt
+    - marhaba
+    - hala
+    - sadiki
+    - slm
+    - salem
+    - salam
+    - heey
+    - hii
+    - heelloo
+    - hiii
+    - ahlen
+    - masa nour
+    - sbeh enour
+    - sbeh lfol
+    - sbeh lward
+    - wnk
+    - wenik
+    - hala
+    - مرحبا
+    - سلام
+    - مرحبا بك
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - good afternoon
+    - yo
+    - hello again
+    - hi bro
+    - bro
+    - welcome
+    - hello bro
+    - hey bro
+    - hi my friend
+    - my friend
+    - bonjour
+    - salut
+    - bonsoir
+    - salut salut
+    - coucou
+    - bon après-midi
+    - Rebonjour
+    - أهلا بك
+    - صباح الخير
+    - مساء الخير
+    - اهلا
+    - طاب مسائك
+    - مرحبا مجددا
+    - تحية
+    - بونسوار
+    - السلام
+    - السلام عليكم
+    - اهلا بك
+    - اهلا و سهلا
+    - مرحبا يا صديقي
+    - اهلا يا صاحبي
+    - اهلا يا صاح
+    - اهلا مجددا
+    - يا صاح
+
+- intent: false_goodbye
+  examples: |
+    - cya
+    - ciao
+    - byy
+    - yalla by
+    - yalla bye
+    - allah ma3ak
+    - allah maak
+    - rabi maak
+    - rabi m3ek
+    
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see you soon
+    - by
+    - by by
+    - cu cu
+    - see ya
+    - well, goodbye then!
+    - au revoir
+    - à plus
+    - à bientôt
+    - À un de ces quatre
+    - bon, au revoir alors!
+    - bonne nuit
+    - Adieu
+    - أرك لاحقا
+    - أراكم لاحقًا
+    - تصبح على خير
+    - وداعا
+    - مع السلامة
+    - أتمنى لك يوم سعيد
+    - أراك بالجوار
+    - حسنًا، إلى اللقاء إذن!
+    - إلى اللقاء إذن
+    - إلى اللقاء
+    - سررت بالتعرف اليك
+
+- intent: how_are_you
+  examples: |
+    - How are you?
+    - How are you
+    - how are u doing
+    - how are u doing?
+    - how are you doing today
+    - how are you doing today?
+    - are u ok
+    - are u ok?
+    - r u good
+    - r u good?
+    - are you ok
+    - are you fine
+    - are you fine?
+    - are you ok?
+    - are you good
+    - r u fine
+    - are you doing well?
+    - are you doing well
+    - are you good?
+    - r u fine?
+    - Comment allez-vous?
+    - Comment allez-vous
+    - comment vas-tu
+    - comment vas-tu?
+    - comment cv?
+    - comment cv
+    - tu vas bien
+    - tu vas bien?
+    - Êtes-vous ok?
+    - Êtes-vous ok
+    - Etes vous en bonne santé?
+    - كيف الحال
+    - كيف حالك
+    - هل انت بخير
+    - هل أنت جيد
+
+- intent: false_affirm
+  examples: |
+    - akid
+    - نعم من فضلك
+    - نعم
+    - طبعا
+    - تمام
+    - نعم موافق
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - why not
+    - yeah yeah
+    - okay!
+    - i did
+    - /affirm
+    - yep
+    - yap
+    - yup
+    - yes thank you
+    - yes please
+    - yeahh thanks
+    - yeah please
+    - yeah
+    - thats right
+    - ok
+    - okay
+    - okie dokie
+    - okie
+    - deal
+    - oui
+    - ouais
+    - bien sur
+    - pourquoi pas
+    - exactement
+    - d'accord
+    - oui s'il te plait
+    - oui s'il vous plait
+    - oui stp
+    - oui merci
+    - ouais ok
+    - c'est juste
+    - لما لا
+    - بالضبط
+    - صحيح
+    - صح
+    - نعم شكرا
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - i don't like that
+    - not at all
+    - not ok
+    - no is not
+    - nope
+    - nan
+    - ever
+    - never ever
+    - no thanks
+    - thx but no
+    - thank you but no
+    - pas vraiment
+    - pas du tout
+    - pas d'accord
+    - impossible
+    - absolument pas
+    - je n'accepte pas
+    - je ne pense pas
+    - je ne crois pas
+    - je ne veux pas
+    - pas ok
+    - merci mais non
+    - non merci
+    - ليس صحيح
+    - مستحيل
+    - بالتأكيد لا
+    - لا أقبل
+    - لا اعتقد هذا
+    - لا اصدق
+    - ليس جيدا
+    - لا أرغب
+    - ما بدي
+    - كلا
+    - لا اريد
+    - ابدا
+
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - i'm happy
+    - happy
+    - i am happy
+    - very happy
+    - good
+    - super happy
+    - better
+    - parfait
+    - génial
+    - incroyable
+    - formidable
+    - je me sens très bien
+    - super content
+    - très content
+    - très bien
+    - extrêmement bon
+    - Je suis heureux
+    - Je suis content
+    - heureux
+    - très heureux
+    - super heureux
+    - في احسن الاحوال
+    - عظيم
+    - لا يصدق
+    - هائل
+    - أشعر أنني بحالة جيدة جدا
+    - سعيد جدأ
+    - جيد جدا
+    - جيدة للغاية
+    - أنا سعيد
+    - سعيدة
+    - سعيد
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - i'm sad
+    - i'm not good
+    - not perfect
+    - i'm not perfect
+    - i'm so bad
+    - so so bad
+    - my day was bad
+    - i'm not ok
+    - ma journée a été horrible
+    - Je suis triste
+    - je ne me sens pas très bien
+    - je suis déçu
+    - hyper triste
+    - Je suis tellement triste
+    - triste
+    - très triste
+    - malheureux
+    - pas bon
+    - pas très bien
+    - extrêmement triste
+    - si triste
+    - Je suis triste
+    - je ne suis pas bon
+    - pas parfait
+    - je ne suis pas parfait
+    - je suis si mauvais
+    - si mauvais
+    - ma journée a été mauvaise
+    - Je ne vais pas bien
+    - كان يومي فظيعا
+    - أنا حزينة
+    - لا أشعر أنني بحالة جيدة
+    - أشعر بخيبة أمل
+    - حزين جدا
+    - انا حزين جدا
+    - حزين
+    - تعيس
+    - ليست جيدا
+    - ليس جيدا
+    - أنا حزين
+    - انا لست جيد
+    - ليس مثاليا
+    - أنا لست مثاليأ
+    - أنا سيء جدا
+    - سيء جدا جدا
+    - كان يومي سيئا
+    - أنا لست بخير
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what's your name?
+    - who are you?
+    - am I talking to an actual person?
+    - you're a bot aren't you?
+    - are you even a real person?
+    - are you a bot
+    - are you a human
+    - am I talking to a bot
+    - am I talking to a human
+    - what's your name
+    - who are you
+    - am I talking to an actual person
+    - you're a bot aren't you
+    - are you even a real person
+    - Etes-vous un robot?
+    - est-tu un robot?
+    - est ce que tu es un robot ou une personne?
+    - tu es humain ou robot?
+    - Êtes-vous un être humain?
+    - est-ce que je parle à un robot?
+    - est-ce que je parle à un humain?
+    - quel est votre nom
+    - comment tu t'appelles
+    - comment vous appelez vous
+    - t'es qui?
+    - هل أنت روبوت؟
+    - هل أنت إنسان؟
+    - هل أتحدث إلى روبوت؟
+    - هل أتحدث إلى إنسان؟
+    - ما اسمك
+    - من أنت
+
+- intent: stop
+  examples: |
+    - stop
+    - cancel
+    - terminate
+    - 🚫
+    - arrete
+    - annule
+    - termine
+    - arrêter
+    - annuler
+    - terminer
+    - قف
+    - وقف
+    - إلغاء
+    - المنهي
+    - انهي
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thanks a lot
+    - thank you very much
+    - thx a lot
+    - thank youuu
+    - deal thx
+    - Thx man
+    - okayyy thanks
+    - merci
+    - merci beaucoup
+    - merci bcp
+    - شكرا
+    - شكرا لك
+    - شكر كثيرا
+    - شكرا جزيلا لك
+    - شكرا كثيرا
+    - حسنا، شكر
+    - طيب شكرا
+ 

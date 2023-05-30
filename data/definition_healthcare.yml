@@ -1,0 +1,24 @@
+version: "3.1"
+
+nlu:
+
+- intent: definition_healthcare
+  examples: | 
+    - [What are abdominal aortic aneurysms?](title)
+    - [Que sont les anévrismes de l'aorte abdominale ?](title)
+    - [ما هي تمدد الشريان الأورطي البطني؟](title)
+    - [What are the symptoms of abdominal aortic aneurysms?](title)
+    - [Quels sont les symptômes des anévrismes de l'aorte abdominale ?](title)
+    - [ما هي أعراض تمدد الشريان الأورطي البطني؟](title)
+    - [What causes abdominal aortic aneurysms?](title)
+    - [Quelles sont les causes des anévrismes de l'aorte abdominale?](title)
+    - [ما الذي يسبب تمدد الشريان الأورطي البطني؟](title)
+    - [How are abdominal aortic aneurysms diagnosed?](title)
+    - [Comment diagnostique-t-on les anévrismes de l'aorte abdominale ?](title)
+    - [كيف يتم تشخيص تمدد الشريان الأورطي البطني؟](title)
+    - [How are abdominal aortic aneurysms treated?](title)
+    - [Comment traite-t-on les anévrismes de l'aorte abdominale ?](title)
+    - [كيف يتم علاج تمدد الشريان الأورطي البطني؟](title)
+    - [How can abdominal aortic aneurysms be prevented?](title)
+    - [Comment prévenir les anévrismes de l'aorte abdominale ?](title)
+    - [كيف يمكن منع تمدد الشريان الأورطي البطني؟](title)

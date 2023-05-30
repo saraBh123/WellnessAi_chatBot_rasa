@@ -1,0 +1,460 @@
+version: "3.1"
+
+nlu:
+
+- intent: give_name
+  examples: |
+    - my name is [Sara](name)
+    - i am [Ahmed](name)
+    - i'm [Salim](name)
+    - I am [fares](name)
+    - It is [amer](name)
+    - my first name is [chaker](name)
+    - my freinds call me [amin](name)
+    - my family call me [mohamed](name)
+    - i am called [souha](name)
+    - call me [wael](name)
+    - [ala](name)
+    - i m [ahmed](name)
+    - this is [wael](name)
+    - i like calling me[raouf](name)
+    - The name I use is [fathel](name)
+    - This is the name I use [farah](name)
+    - name is [mohammed amine](name)
+    - it's [abdellatif](name)
+    - i am named [badreddin](name)
+    - my freinds call me [salah](name)
+    - my family call me [chaker](name)
+    - i am called [ragheb](name)
+    - i m [lotfi](name)
+    - i like calling me[sahar](name)
+    - I am [hanène](name)
+    - The name I use is [wissal](name)
+    - I am [ons](name)
+    - my name is [ala](name)
+    - salim my name is [salim](name)
+    - yes my name is [salim](name)
+    - my name is [sami](name)
+    - my namz is [saladnf](name)
+    - Call me [badreddine](name)
+    - my freinds call me [rathwen](name)
+    - [abdellaltif](name)
+    - you can call me [abdou](name)
+    - je m'appelle [Sara](name)
+    - je suis [Ahmed](name)
+    - C'est [amer](name)
+    - mon prénom est [chaker](name)
+    - mes amis m'appellent [amin](name)
+    - ma famille m'appelle [mohamed](name)
+    - je m'appelle [souha](name)
+    - appelle-moi [wael](name)
+    - j'aime m'appeler[raouf](name)
+    - Le nom que j'utilise est [fathel](name)
+    - C'est le nom que j'utilise [farah](name)
+    - mon nom est [mohammed amine] (name)
+    - oui je m'appelle [salim](name)
+    - tu peux m'appeler [abdou](name)
+    - اسمي [سارة] (name)
+    - انا [احمد] (name)
+    - انني [عامر] (name)
+    - اسمي الأول [شاكر] (name)
+    - عائلتي تناديني [محمد] (name)
+    - نادني بي [وائل] (name)
+    - [علاء] (name)
+    - أنا [أحمد] (name)
+    - هذا [وائل] (name)
+    - أحب مناداتي [رؤوف] (name)
+    - الاسم الذي أستخدمه هو [فاضل] (name)
+    - هذا هو الاسم الذي أستخدمه [فرح] (name)
+    - الاسم [محمد أمين] (name)
+    - أنا اسمي [بدر الدين] (name)
+    - أحب مناداتي بـ [سحر] (name)
+
+- lookup: name 
+  examples: | 
+    - Ahmed
+    - Amine
+    - Anis
+    - Bassem
+    - basem
+    - wisam
+    - arije
+    - asil
+    - salha
+    - Chaker
+    - Fares
+    - Hatem
+    - Houssem
+    - Mohamed
+    - Nizar
+    - Riadh
+    - Sami
+    - Slim
+    - Wassim
+    - Youssef
+    - Zied
+    - yosra
+    - Ridha
+    - Sondos
+    - Zohra
+    - Aicha
+    - Dalila
+    - Chiraz
+    - Emna
+    - Faten
+    - Anissa
+    - Kamel
+    - Fatma
+    - Majdi
+    - Moez
+    - Hajar
+    - Basma
+    - Bahia
+    - Hela
+    - Jihene
+    - Leila
+    - Mariem
+    - Nesrine
+    - Oumayma
+    - Jihane
+    - Ines
+    - Rania
+    - Safa
+    - Asma
+    - Aziza
+    - Fathi
+    - Dorra
+    - Aziz
+    - Ghada
+    - Ezzedine
+    - Chokri
+    - Habiba
+    - Faiza
+    - Hanen
+    - Insaf
+    - Jamil
+    - Kaouther
+    - Lamia
+    - Lobna
+    - Manel
+    - Nour
+    - Rim
+    - Saida
+    - Salma
+    - Wafa
+    - Adel
+    - Ali
+    - Anouar
+    - Ayoub
+    - Bilel
+    - Dhia
+    - Elyes
+    - Hassen
+    - Jalel
+    - Mehdi
+    - Nabil
+    - Raouf
+    - Yassine
+    - Abir
+    - Ahlem
+    - Amal
+    - Asmae
+    - Farah
+    - Houda
+    - Intissar
+    - Jannet
+    - Latifa
+    - Malika
+    - Mouna
+    - Nadia
+    - Olfa
+    - Sabrina
+    - aya
+    - Sonia
+    - Soumaya
+    - Atef
+    - Baha
+    - hedia
+    - hadia
+    - Chedly
+    - abdallah
+    - abdessatar
+    - Ghazi
+    - Emir
+    - raja
+    - yosri
+    - rabeb
+    - samira
+    - sirine
+    - samar
+    - nawres
+    - Hedi
+    - Hichem
+    - Jaber
+    - Amel
+    - Jamel
+    - Karim
+    - Lotfi
+    - Marouane
+    - Mourad
+    - Nader
+    - Raed
+    - Sabri
+    - wahida
+    - wahiba
+    - Walid
+    - Achref
+    - Adnen
+    - Fethi
+    - Habib
+    - Hamza
+    - Issam
+    - Kais
+    - Khaled
+    - Maher
+    - Mohamed Amine
+    - Omar
+    - Rami
+    - Saber
+    - Saif
+    - Samir
+    - Sofiane
+    - Tarek
+    - Ameni
+    - Amira
+    - Amna
+    - Arbia
+    - Asmaa
+    - maaouia
+    - Feryel
+    - Hayfa
+    - Hend
+    - Imen
+    - Ibtihel
+    - Khadija
+    - Lina
+    - Meriem
+    - Myriam
+    - Nawel
+    - Sana
+    - Zaineb
+    - sarra
+    - yahya
+    - molk
+    - roua
+    - hajer
+    - naouras
+    - sihem
+    - badis
+    - sahar
+    - ibtissem
+    - malek
+    - melek
+    - oumaya
+    - oussema
+    - montassar
+    - saad
+    - mezen
+    - aymen
+    - wissem
+    - marwa
+    - khouloud
+    - abir
+    - semia
+    - samia
+    - siwar
+    - مالك
+    - ملاك
+    - امية
+    - اسامة
+    - منتصر
+    - سعد
+    - مازن
+    - ايمن
+    - مروى
+    - خلود
+    - عبير
+    - سامية
+    - يحيى
+    - ملك
+    - رؤى
+    - سيهام
+    - سوار
+    - بديس
+    - سحر
+    - ابتسام
+    - أحمد
+    - أمين
+    - أنيس
+    - بسام
+    - باسم
+    - وسام
+    - أريج
+    - أسيل
+    - صالحة
+    - شاكر
+    - فارس
+    - حاتم
+    - حسام
+    - محمد
+    - محمد أمين
+    - نزار
+    - رياض
+    - سامي
+    - سليم
+    - وسيم
+    - يوسف
+    - زياد
+    - يسرى
+    - رضا
+    - سندس
+    - صندس
+    - زهرى
+    - زهرة
+    - عيشة
+    - عائشة
+    - أميرة
+    - دليلة
+    - شراز
+    - شيراز
+    - آمنة
+    - امنة
+    - فاتن
+    - أنيسة
+    - كامل
+    - كمال
+    - فاطمة
+    - مجدي
+    - ماجد
+    - موعز
+    - معز
+    - معتز
+    - هاجر
+    - بسمة
+    - باهية
+    - هالا
+    - جيهان
+    - ليلى
+    - ليليا
+    - مريم
+    - نسرين
+    - أميمة
+    - ايناس
+    - رانيا
+    - صفى
+    - أسماء
+    - عزيزة
+    - فتحي
+    - درة
+    - عزيز
+    - غادة
+    - عزالدين
+    - شكري
+    - حبيبة
+    - حبيب
+    - فائزة
+    - حنان
+    - هند
+    - هندة
+    - انصاف
+    - جميلة
+    - كوثر
+    - لمياء
+    - لبنة
+    - منال
+    - نور
+    - ريم
+    - سيدة
+    - سلمى
+    - وفاء
+    - وفى
+    - عادل
+    - علي
+    - أنور
+    - أنوار
+    - أيوب
+    - بيلال
+    - بلال
+    - ضياء
+    - الياس
+    - حسان
+    - جلال
+    - قيس
+    - خالد
+    - لطفي
+    - ماهر
+    - مهدي
+    - نبيل
+    - رؤوف
+    - يسين
+    - عبير
+    - أحلام
+    - أمل
+    - فرح
+    - هدى
+    - جنات
+    - لطيفة
+    - مليكة
+    - منى
+    - هناء
+    - نادية
+    - ألفة
+    - صبرين
+    - اية
+    - سنية
+    - سمية
+    - عاطف
+    - بهاء
+    - هادية
+    - شادلي
+    - عبدالله
+    - عبدالستار
+    - غازي
+    - أمير
+    - رجاء
+    - يسري
+    - رباب
+    - سميرة
+    - سيرين
+    - سمر
+    - نورس
+    - هادي
+    - هشام
+    - عصام
+    - جابر
+    - امال
+    - جمال
+    - كريم
+    - مروان
+    - مراد
+    - نادر
+    - رائد
+    - صبري
+    - وحيدة
+    - وليد
+    - أشرف
+    - عدنان
+    - فتحي
+    - حمزة
+    - عصام
+    - خالد
+    - محمد عزيز 
+    - عمر
+    - رامي
+    - صابر
+    - سيف
+    - سمير
+    - سفيان
+    - طارق
+    - اماني
+    - عربية
+    - معاوية
+    - فريال
+    - خديجة
+    - لينا
+    - ليندا
+    - ميريام
+    - نوال
+    - سناء
+    - زينب
+    - سارة

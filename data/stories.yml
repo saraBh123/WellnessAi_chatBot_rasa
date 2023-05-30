@@ -1,0 +1,76 @@
+version: "3.1"
+
+stories:
+
+- story: give_definition
+  steps:
+  - intent: definition_healthcare
+  - action: action_def_health
+
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: action_detect_language
+  - action: utter_greet
+
+- story: false greet
+  steps:
+  - intent: false_greet
+  - action: action_false_greet
+
+- story: say thank you
+  steps:
+  - intent: thank
+  - action: action_detect_language
+  - action: utter_thanks
+
+- story: give help
+  steps:
+  - intent: help
+  - action: action_detect_language
+  - action: utter_help
+
+- story: give_name
+  steps:
+  - intent: give_name
+  - action: action_give_name
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: action_detect_language
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: action_detect_language
+  - action: utter_cheer_up
+  - action: action_detect_language
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: action_detect_language
+  - action: utter_happy
+
+- story: happy path
+  steps:
+  - intent: affirm
+  - action: action_detect_language
+  - action: utter_happy
+
+- story: hospital path
+  steps:
+  - intent: cherche_hopital
+  - action: action_detect_language
+  - action: utter_cherche_hopital
+  - intent: position
+  - action: action_get_hospital
+
+- story: info hospital
+  steps:
+  - intent: info_hopital
+  - action: action_get_info_hospital
+
+
+- story: position
+  steps:
+  - intent: position
+  - action: action_get_hospital
